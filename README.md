@@ -4,4 +4,4 @@ Personal coding practice and self-study projects
 
 ## Contents
 
-- basic Haskell practice
+- Haskell basic syntax practice

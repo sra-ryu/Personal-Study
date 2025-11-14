@@ -28,3 +28,20 @@ onlyEvens = filter ((== 0) . (`mod` 2))
 -- filter string that length == 2
 length' :: [String] -> [String]
 length' = filter ((== 2) . length)
+
+--- higher order functions - mix ---
+-- select elements that even and divide by 2
+halveEvens :: [Int] -> [Int]
+halveEvens = map (`div` 2) . filter even
+-- `div` 2: for int
+-- /2: for double or float
+
+-- without composition
+halveEvens' :: [Int] -> [Int]
+halveEvens' xs = map (`div` 2) (filter even xs)
+
+-- convert string to uppercase
+-- predicate: length of string > 3
+longToUpper :: [String] -> [String]
+longToUpper = map (map toUpper) . filter ((> 3) . length)
+-- string = [Char], list of string = [[Char], [Char], ...]

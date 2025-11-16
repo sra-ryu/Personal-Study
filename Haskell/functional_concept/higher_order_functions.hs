@@ -4,6 +4,7 @@ applyThrice :: (a -> a) -> a -> a
 applyThrice f x = f (f (f x))
 
 
+
 --- higher order functions - map ---
 -- add 10 to elements
 add10 :: [Int] -> [Int]
@@ -18,6 +19,7 @@ lengths :: [String] -> [Int]
 lengths = map length
 
 
+
 --- higher order functions - filter ---
 -- filter elements that greater than 10
 greaterThan10 :: [Int] -> [Int]
@@ -30,6 +32,7 @@ onlyEvens = filter ((== 0) . (`mod` 2))
 -- filter string that length == 2
 length' :: [String] -> [String]
 length' = filter ((== 2) . length)
+
 
 
 --- higher order functions - mix ---
@@ -50,6 +53,7 @@ longToUpper = map (map toUpper) . filter ((> 3) . length)
 -- string = [Char], list of string = [[Char], [Char], ...]
 
 
+
 --- higher order functions - fold ---
 -- product all elements of a list
 productList :: [Int] -> Int
@@ -65,3 +69,14 @@ concatWords = foldl go ""
 -- find a max element(int)
 maxList :: [Int] -> Int
 maxList (x:xs) = foldr max x xs
+
+
+
+--- higher order functions - zipWith ---
+-- multiply two elements in the same position
+multiplyLists :: [Int] -> [Int] -> [Int]
+multiplyLists = zipWith (*)
+
+-- merge strings and add '-' between strings
+joinWithDash :: [String] -> [String] -> [String]
+joinWithDash = zipWith (\s1 s2 -> s1 ++ "-" ++ s2)

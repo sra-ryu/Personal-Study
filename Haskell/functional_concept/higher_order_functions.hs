@@ -70,6 +70,22 @@ concatWords = foldl go ""
 maxList :: [Int] -> Int
 maxList (x:xs) = foldr max x xs
 
+-- make a reverse function
+myReverse :: [a] -> [a]
+myReverse = foldr (\x acc -> acc ++ [x]) [] 
+
+-- find a length of a list
+myLength :: [a] -> Int
+myLength = foldr (\_ acc -> acc + 1) 0
+
+-- check all elements, if they meet the predicate
+allTrue :: (a -> Bool) -> [a] -> Bool
+allTrue pred = foldr (\x acc -> pred x && acc) True
+
+-- check if at least one element meets the predicate
+anyTrue :: (a -> Bool) -> [a] -> Bool
+anyTrue pred = foldr (\x acc -> pred x || acc) True
+
 
 
 --- higher order functions - zipWith ---

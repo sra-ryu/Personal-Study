@@ -8,3 +8,6 @@ Personal coding practice and self-study projects
 - basic: basic syntax, list, recursion
 - functional_concept: anonymus function, higher order functions, partial application
 - type: product type, sum type
+
+### Java
+- library app: Library management application using Java and Spring Boot

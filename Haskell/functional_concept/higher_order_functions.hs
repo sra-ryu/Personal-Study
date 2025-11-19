@@ -84,7 +84,7 @@ allTrue pred = foldr (\x acc -> pred x && acc) True
 
 -- check if at least one element meets the predicate
 anyTrue :: (a -> Bool) -> [a] -> Bool
-anyTrue pred = foldr (\x acc -> pred x || acc) True
+anyTrue pred = foldr (\x acc -> pred x || acc) False
 
 
 

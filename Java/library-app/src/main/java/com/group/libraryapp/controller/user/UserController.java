@@ -49,15 +49,12 @@ public class UserController {
     @GetMapping("/user")
     public List<UserResponse> getUsers() {
         String sql = "SELECT * FROM user";
-        return jdbcTemplate.query(sql, new RowMapper<UserResponse>() {
-            // RowMapper: get result of query - here id, name, age and return UserResponse
-            @Override
-            public UserResponse mapRow(ResultSet rs, int rowNum) throws SQLException {
-                long id = rs.getLong("id");
-                String name = rs.getString("name");
-                int age = rs.getInt("age");
-                return new UserResponse(id, name, age);
-            }
+        // RowMapper: get result of query - here id, name, age and return UserResponse
+        return jdbcTemplate.query(sql, (rs, rowNum) -> {
+            long id = rs.getLong("id");
+            String name = rs.getString("name");
+            int age = rs.getInt("age");
+            return new UserResponse(id, name, age);
         });
     }
 }

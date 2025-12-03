@@ -22,4 +22,20 @@ public class CalcController {
         return new CalcResult(num1, num2);
     }
 
+    /*
+     * todo: post sum of numbers
+     *
+     * HTTP Method :    POST
+     * HTTP Path   :    /api/v1/calc
+     * Request Body:    JSON(numbers, list)
+     * return:          int(sum of numbers)
+     *
+     * */
+    @PostMapping("/api/v1/calc")
+    public CalcResponse sendSum(@RequestBody CalcRequest request) {
+        return new CalcResponse(
+                request.getNumbers()
+        );
+    }
+
 }

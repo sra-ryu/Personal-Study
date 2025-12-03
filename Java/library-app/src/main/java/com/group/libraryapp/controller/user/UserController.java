@@ -74,5 +74,19 @@ public class UserController {
         jdbcTemplate.update(sql, request.getName(), request.getId());
     }
 
+    /*
+     * todo: delete user
+     *
+     * HTTP Method: DELETE
+     * HTTP Path:   /user
+     * query:       String name
+     * return:      X (HTTP status)
+     *
+     * */
+    @DeleteMapping("/user")
+    public void deleteUser(@RequestParam String name) {
+        String sql = "DELETE FROM user WHERE name = ?";
+        jdbcTemplate.update(sql, name);
+    }
 
 }

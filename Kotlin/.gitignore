@@ -1,0 +1,13 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# build
+out/
+
+# etc.
+*.class
+*.log
+.DS_Store

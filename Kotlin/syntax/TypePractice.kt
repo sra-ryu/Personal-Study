@@ -1,3 +1,5 @@
+package syntax
+
 fun main() {
 
     /** type inference **/

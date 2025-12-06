@@ -1,3 +1,5 @@
+package syntax;
+
 import org.jetbrains.annotations.NotNull;
 
 public class JavaMoney implements Comparable<JavaMoney> {

@@ -1,3 +1,5 @@
+package syntax
+
 import java.lang.IllegalArgumentException
 
 fun main() {
@@ -27,7 +29,7 @@ fun main() {
     println(str2?.length ?: 0) // Elvis op. = ?: -> here: print 0
 
     /*** use Java class in Kotlin ***/
-    val person = Person("John") // @Nullable -> name can be null -> Kotlin knows it
+    val person = Person("John", 25) // @Nullable -> name can be null -> Kotlin knows it
     // Platform Type: there's no information about null type -> it might be problem in Kotlin
 
 }

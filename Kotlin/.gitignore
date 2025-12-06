@@ -1,0 +1,28 @@
+# Kotlin
+*.class
+*.jar
+*.war
+*.ear
+*.log
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.ipr
+*.iws
+out/
+.idea_modules/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# log file
+*.log
+
+# temp file
+*.tmp
+*.bak
+*.swp
+*~.nib

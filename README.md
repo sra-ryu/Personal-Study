@@ -11,3 +11,6 @@ Personal coding practice and self-study projects
 
 ### Java
 - library app: Library management application using Java and Spring Boot
+
+### Kotlin
+- syntax: practice Kotlin syntax

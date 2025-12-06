@@ -39,3 +39,18 @@ bin/
 
 # Mac
 .DS_Store
+
+### log file ###
+*.log
+logs/
+
+### environment & configuration ###
+.env
+application-local.yml
+application-local.properties
+
+### temp file ###
+*.tmp
+*.bak
+*.swp
+*~

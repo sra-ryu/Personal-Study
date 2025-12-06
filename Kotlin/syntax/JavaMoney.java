@@ -12,6 +12,10 @@ public class JavaMoney implements Comparable<JavaMoney> {
         this.amount = amount;
     }
 
+    public JavaMoney plus(JavaMoney other) {
+        return new JavaMoney(this.amount + other.amount);
+    }
+
     @Override
     public int compareTo(@NotNull JavaMoney obj) {
         return Long.compare(this.amount, obj.amount);

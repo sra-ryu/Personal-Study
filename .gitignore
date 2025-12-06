@@ -1,14 +1,6 @@
-# Gradle
-.gradle/
-build/
-gradle-app.setting
-
 # IDE
 .idea/
 *.iml
-
-# Build outputs
-out/
 
 # OS
 .DS_Store

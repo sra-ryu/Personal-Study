@@ -1,0 +1,23 @@
+# IDE
+.idea/
+*.iml
+*.iws
+
+# Mac
+.DS_Store
+
+# Gradle
+.gradle/
+build/
+out/
+
+# Java
+*.class
+*.jar
+*.war
+
+# log
+*.log
+
+# DB
+application.yml

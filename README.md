@@ -14,3 +14,6 @@ Personal coding practice and self-study projects
 
 ### Kotlin
 - syntax: practice Kotlin syntax
+
+### Prolog
+- practice recursion in Prolog
